@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Hello</p>
+    <table border>
+        <tr>
+            <th>Imiona</th>
+            {%for i in list%}
+            <td>{{i.name}}</td>
+            {%endfor%}
+        </tr>
+        <tr>
+            <th>Nazwiska</th>
+            {%for i in list%}
+            <td>{{i.surname}}</td>
+            {%endfor%}
+        </tr>
+        <tr>
+            <th>Wieki</th>
+            {%for i in list%}
+            <td>{{i.age}}</td>
+            {%endfor%}
+        </tr>
+    </table>
+</body>
+</html>

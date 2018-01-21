@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% with messages = get_flashed_messages() %}
+	            {% if messages %}
+                    {% for message in messages %}
+		             <div >
+                         {{message}}
+                     </div>
+		            {% endfor %}
+                {% endif %}
+{% endwith %}
+    <p>Twoje srodki: {{money}}</p>
+<ul>
+    {%for przelew in przelewy%}
+        <li>Numer konta, na ktore przelales pieniadze: {{przelew['numer_konta']}} </li>
+        <li>Kwota przelewu: {{przelew['kwota']}}</li>
+
+    {%endfor%}
+</ul>
+    <form action="/konto/" method="post">
+        <input type="text" placeholder = "Numer konta" name='numer_konta' value="{{request.form.numer_konta}}">
+        <input type="text" placeholder = "Kwota przelewu" name='kwota' value="{{request.form.kwota}}">
+        <input type="submit" value="Przelej">
+    </form>
+
+</body>
+</html>

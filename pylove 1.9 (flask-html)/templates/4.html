@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table border="2">
+    {%for i in range(ilosc)%}
+    <tr>
+        {%if id is not none%}
+        <th>{{id[i]}}</th>
+        {%endif%}
+        <th>{{imie[i]}}</th>
+        <th>{{nazwisko[i]}}</th>
+        {%if placa is not none%}
+        <th>{{placa[i]}}</th>
+        {%endif%dddddddddddddddddddddddd}
+        {%if opis is not none%}
+        <th>{{opis[i]}}</th>
+        {%endif%}
+    </tr>
+    {%endfor%}
+</table>
+
+</body>
+</html>

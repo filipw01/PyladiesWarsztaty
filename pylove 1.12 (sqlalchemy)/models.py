@@ -4,11 +4,11 @@ from sqlalchemy.types import String
 from main import db
 
 
-class BlogPost(db.Model):
+class BlogPosts(db.Model):
     """
     Blog post model
     """
-    __tablename__ = 'BlogPost'
+    __tablename__ = 'blogpost'
     id = Column(Integer, autoincrement=True, primary_key=True)
     sub = Column(String(100), unique=True)
     content = Column(String(2000))

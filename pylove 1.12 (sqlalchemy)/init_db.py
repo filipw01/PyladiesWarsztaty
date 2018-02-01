@@ -1,6 +1,5 @@
 from sqlalchemy import create_engine
-
-from main import db
+import main
 import models
 
 
